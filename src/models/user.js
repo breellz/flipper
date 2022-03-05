@@ -2,7 +2,6 @@ const mongoose = require('mongoose')
 const validator = require('validator')
 const bcrypt = require('bcryptjs')
 const jwt = require('jsonwebtoken')
-const Transaction = require('./transaction')
 const ObjectID = mongoose.Schema.Types.ObjectId
 
 const userSchema = new mongoose.Schema({
@@ -71,42 +70,42 @@ const userSchema = new mongoose.Schema({
 //     return userObject
 // }
 
-// //Generate auth token
-// userSchema.methods.generateAuthToken = async function () {
-//     const user = this
-//     const token = jwt.sign({ _id: user._id.toString()}, 'bankingapi')
-//     user.tokens = user.tokens.concat({token})
-//      await user.save()
-//     return token
-// }
+//Generate auth token
+userSchema.methods.generateAuthToken = async function () {
+    const user = this
+    const token = jwt.sign({ _id: user._id.toString()}, 'flippermarketplace')
+    user.tokens = user.tokens.concat({token})
+     await user.save()
+    return token
+}
 
-// //login in users
-// userSchema.statics.findByCredentials = async (email, password) => {
-//     const user = await User.findOne({ email })
-//     if (!user) {
-//         throw new Error('Email is not registered')
-//     }
-//     //check if user account is isDisabled and restrict access
-//     if(user.isDisabled === true) {
-//         throw new Error('Your account is disabled, please contact support for further assistance')
-//     }
-//     const isMatch = await bcrypt.compare(password, user.password)
-//     if(!isMatch) {
-//         throw new Error('Credentials do not match')
-//     }
+//login in users
+userSchema.statics.findByCredentials = async (email, password) => {
+    const user = await User.findOne({ email })
+    if (!user) {
+        throw new Error('Email is not registered')
+    }
+    //check if user account is isDisabled and restrict access
+    if(user.isDisabled === true) {
+        throw new Error('Your account is disabled, please contact support for further assistance')
+    }
+    const isMatch = await bcrypt.compare(password, user.password)
+    if(!isMatch) {
+        throw new Error('Credentials do not match')
+    }
 
-//     return user
-// }
+    return user
+}
 
-// //Hash plain password before saving
-// userSchema.pre('save', async function(next) {
-//     const user = this
-//     if (user.isModified('password')) {
-//         user.password = await bcrypt.hash(user.password, 8)
-//     }
+//Hash plain password before saving
+userSchema.pre('save', async function(next) {
+    const user = this
+    if (user.isModified('password')) {
+        user.password = await bcrypt.hash(user.password, 8)
+    }
 
-//     next()
-// })
+    next()
+})
 
 // //delete user transactions when a user is deleted
 
