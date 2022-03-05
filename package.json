@@ -1,0 +1,30 @@
+{
+  "name": "flipper",
+  "version": "1.0.0",
+  "description": "A campus based marketplace",
+  "main": "app.js",
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "env-cmd -f ./config/dev.env nodemon src/app.js",
+    "test": "env-cmd -f ./config/test.env jest --detectOpenHandles --watch"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/breellz/flipper.git"
+  },
+  "author": "Bassit Owolabi",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/breellz/flipper/issues"
+  },
+  "homepage": "https://github.com/breellz/flipper#readme",
+  "dependencies": {
+    "express": "^4.17.3",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.2.4",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
