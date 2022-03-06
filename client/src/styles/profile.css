@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
+
+#profile-name {
+    font-family: 'Recursive', sans-serif;
+  }
+
+/* .gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin: 10px auto;
+} */
+.card {
+    width: 75%;
+}

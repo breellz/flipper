@@ -20,7 +20,10 @@
     border-bottom: 1px solid #6a1b9a !important;
     box-shadow: 0 1px 0 0 #6a1b9a !important;
   }
-
+  .input-field input[type=number]:focus {
+    border-bottom: 1px solid #6a1b9a !important;
+    box-shadow: 0 1px 0 0 #6a1b9a !important;
+  }
   h2, p {
       color: #6a1b9a
   }

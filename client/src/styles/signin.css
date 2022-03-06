@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Recursive:wght@600&display=swap');
+
 .signin-card {
     margin-top: 80px;
 }
@@ -21,4 +23,8 @@
 
   h2, p {
       color: #6a1b9a
+  }
+
+  #header-text {
+    font-family: 'Recursive', sans-serif;
   }
