@@ -7,6 +7,7 @@ import Profile from './components/screens/Profile'
 import Sell from './components/screens/Sell'
 import SignUp from './components/screens/SignUp'
 import Home from './components/screens/Home'
+import Footer from './components/screens/Footer'
 import './App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       <Route path="/signin" element = {<SignIn/ >} />
       
       </Routes>
+      <Footer />
     </BrowserRouter>
 
   );

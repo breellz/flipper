@@ -13,3 +13,17 @@
 .card {
     width: 75%;
 }
+#my-posts {
+    text-align: center;
+    font-family: 'Recursive', sans-serif;
+}
+
+@media (min-width:320px) and (max-width:640px)  { 
+   .profile-section{
+       display: flex;
+       flex-direction: column;
+       text-align: center;
+       justify-content: center
+   } 
+   
+}

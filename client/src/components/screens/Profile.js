@@ -4,8 +4,8 @@ import '../../styles/profile.css'
 
 const Profile = () => {
     return (
-        <div style={{ maxWidth: '80%', margin: '0px auto' }}>
-            <div style={{
+        <div className='container'>
+            <div className="profile-section" style={{
                 display: 'flex',
                 justifyContent: 'space-around',
                 margin: '18px 0px',
@@ -27,7 +27,9 @@ const Profile = () => {
                 </div>
             </div>
             <div className="gallery">
-                <div class="row">
+               
+                <h5 id="my-posts">MY POSTS</h5>
+                <div className="row">
                     <PostCard />
                     <PostCard />
                     <PostCard />
