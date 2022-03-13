@@ -1,7 +1,7 @@
 import React from 'react';
 
 
-const postCard = () => {
+const postCard = (posts) => {
     return (
         <div>
             <div class="col l4 s12 m6">
